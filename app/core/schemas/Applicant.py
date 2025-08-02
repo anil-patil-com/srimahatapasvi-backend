@@ -2,14 +2,14 @@ from typing import List
 from pydantic import BaseModel
 
 class ApplicantCreate(BaseModel):
-    name: str
+    fullName: str
     Address: str
     contactNumber: str
     dateOfBirth: str
 
 class ApplicantResponse(BaseModel):
     id: str
-    name: str
+    fullName: str
     Address: str
     contactNumber: str
     dateOfBirth: str

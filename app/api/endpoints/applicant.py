@@ -51,7 +51,8 @@ async def create_applicant(
         # Create new applicant
         applicant = Applicant(
             id=str(uuid4()),
-            name=applicant_in.name,
+            fullName=applicant_in.fullName,
+            dateOfBirth=applicant_in.dateOfBirth,
             Address=applicant_in.Address,
             contactNumber=applicant_in.contactNumber
         )
@@ -61,7 +62,8 @@ async def create_applicant(
         
         return ApplicantResponse(
             id=str(applicant.id),
-            name=applicant.name,
+            fullName=applicant.fullName,
+            dateOfBirth=applicant.dateOfBirth,
             Address=applicant.Address,
             contactNumber=applicant.contactNumber
         )
