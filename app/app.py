@@ -2,9 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from motor.motor_asyncio import AsyncIOMotorClient
 from beanie import init_beanie
-from mangum import Mangum
 from starlette.middleware.authentication import AuthenticationMiddleware
-from pyngrok import ngrok
 
 from app.api.api import api_router
 from app.core.models.models import __all__
@@ -43,6 +41,6 @@ async def startup_event():
 
 # Include API router
 app.include_router(api_router, prefix="/v1")
-public_url = ngrok.connect(8000).public_url
-print("your public endpoint :", public_url)
+# public_url = ngrok.connect(8000).public_url
+# print("your public endpoint :", public_url)
 # handler = Mangum(app)

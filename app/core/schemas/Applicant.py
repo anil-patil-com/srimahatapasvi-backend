@@ -1,0 +1,20 @@
+from typing import List
+from pydantic import BaseModel
+
+class ApplicantCreate(BaseModel):
+    name: str
+    Address: str
+    contactNumber: str
+
+class ApplicantResponse(BaseModel):
+    id: str
+    name: str
+    Address: str
+    contactNumber: str
+
+    class Config:
+        from_attributes = True
+
+class ApplicantListResponse(BaseModel):
+    applicants: List[ApplicantResponse]
+    total: int
