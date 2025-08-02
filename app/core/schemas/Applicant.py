@@ -5,12 +5,14 @@ class ApplicantCreate(BaseModel):
     name: str
     Address: str
     contactNumber: str
+    dateOfBirth: str
 
 class ApplicantResponse(BaseModel):
     id: str
     name: str
     Address: str
     contactNumber: str
+    dateOfBirth: str
 
     class Config:
         from_attributes = True
