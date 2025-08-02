@@ -22,9 +22,10 @@ async def get_all_applicants(request: Request) -> ApplicantListResponse:
         applicant_responses = [
             ApplicantResponse(
                 id=str(applicant.id),
-                name=applicant.name,
+                fullName=applicant.fullName,
                 Address=applicant.Address,
-                contactNumber=applicant.contactNumber
+                contactNumber=applicant.contactNumber,
+                dateOfBirth=applicant.dateOfBirth
             )
             for applicant in applicants
         ]
