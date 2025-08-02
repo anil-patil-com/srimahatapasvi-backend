@@ -6,7 +6,7 @@ from pydantic import Field
 class Applicant(Document):
     id: str = Field(alias="_id")
     fullName: str
-    dateOfBirth: datetime
+    dateOfBirth: str
     Address: str
     contactNumber: str
 
