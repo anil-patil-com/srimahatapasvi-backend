@@ -1,6 +1,6 @@
 from fastapi import APIRouter
 
-from app.api.endpoints import auth, events, spiritual_events, team, darshan
+from app.api.endpoints import auth, events, spiritual_events, team, darshan, applicant
 
 api_router = APIRouter()
 
